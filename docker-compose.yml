@@ -11,6 +11,16 @@ services:
       - "8000:8000"
     depends_on:
       - pgdb
+  drf:
+    build: .
+    container_name: drf
+    command: python manage.py runserver 0.0.0.0:8001
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8001:8001"
+    depends_on:
+      - pgdb
   pgdb:
     image: postgres
     container_name: pgdb
