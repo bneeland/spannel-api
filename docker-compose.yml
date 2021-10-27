@@ -1,34 +1,44 @@
 version: "3.8"
 
 services:
-  django:
+  web:
     build: .
-    container_name: django
-    command: python manage.py runserver 0.0.0.0:8000
+    container_name: web
+    command: python web/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/usr/src/app
     ports:
       - "8000:8000"
     depends_on:
-      - pgdb
-  drf:
+      - webdb
+  api:
     build: .
-    container_name: drf
-    command: python manage.py runserver 0.0.0.0:8001
+    container_name: api
+    command: python api/manage.py runserver 0.0.0.0:8001
     volumes:
       - .:/usr/src/app
     ports:
       - "8001:8001"
     depends_on:
-      - pgdb
-  pgdb:
+      - apidb
+  webdb:
     image: postgres
-    container_name: pgdb
+    container_name: webdb
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - webdbdata:/var/lib/postgresql/data
+  apidb:
+    image: postgres
+    container_name: apidb
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - apidbdata:/var/lib/postgresql/data
 volumes:
-  pgdata:
+  webdbdata:
+  apidbdata:
