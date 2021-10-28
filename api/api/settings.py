@@ -37,7 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'back',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+    'rest_hooks',
 ]
+
+HOOK_EVENTS = {
+    'order.created': 'spannelapi.Order.created',
+    'order.updated': 'spannelapi.Order.updated',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --heading: black;
+  --sub_heading: black;
+  --text: black;
+  --button_dark: darkblue;
+  --button_light: mediumblue;
+  --link_dark: darkblue;
+  --link_light: mediumblue;
+}
+
+body {
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+}
+
+select.form-control, input.form-control, textarea.form-control {
+  font-size: 1em;
+}
+
+label {
+  font-size: 1em;
+}
+
+.btn {
+  font-size: 1em;
+}
+
+a, .btn-link {
+  color: var(--link_dark);
+  text-decoration: underline;
+}
+
+a:hover, .btn-link:hover {
+  color: var(--link_light);
+  text-decoration: underline;
+}
+
+.btn {
+  border-radius: 0.5em;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--button_dark);
+}
+
+.btn-primary:hover {
+  background: var(--button_light);
+}
