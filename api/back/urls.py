@@ -15,8 +15,4 @@ router.register('orders', views.OrderView)
 urlpatterns = [
     path('', include(router.urls)),
     path('token', obtain_auth_token, name='obtain_auth_token'),
-    # path('settings', views.Settings.as_view(), name='settings'),
-    # path('settings/webhooks/create', views.CreateWebhook.as_view(), name='create_webhook'),
-    # path('settings/webhooks/<int:pk>/update', views.UpdateWebhook.as_view(), name='update_webhook'),
-    # path('settings/webhooks/<int:pk>/delete', views.DeleteWebhook.as_view(), name='delete_webhook'),
 ]
