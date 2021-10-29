@@ -149,3 +149,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication'
     ]
 }
+
+LOGIN_REDIRECT_URL = 'back:obtain_auth_token'
+LOGOUT_REDIRECT_URL = 'back:obtain_auth_token'
