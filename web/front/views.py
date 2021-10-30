@@ -24,7 +24,5 @@ class DashboardView(LoginRequiredMixin, TemplateView):
 
         response = requests.request("GET", url, headers=headers)
 
-        print(response.json(), flush=True)
-
         context['orders'] = response.json()
         return context
