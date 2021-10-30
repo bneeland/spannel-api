@@ -44,6 +44,7 @@ a:hover, .btn-link:hover {
 
 .btn-primary {
   background: var(--button_dark);
+  text-decoration: none;
 }
 
 .btn-primary:hover {

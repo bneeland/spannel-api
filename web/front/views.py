@@ -1,18 +1,12 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
-from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic.base import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from . import models
 
-class Home(SuccessMessageMixin, CreateView):
-    model = models.Subscriber
-    fields = [
-        'first_name',
-        'last_name',
-        'email',
-        'reason',
-    ]
-    template_name = 'front/home.html'
-    success_url = reverse_lazy('front:home')
-    success_message = "Thanks, %(first_name)s. We'll be in touch to get you started with Spannel, and with occasional updates."
+class HomeView(TemplateView):
+    template_name = 'front/home_view.html'
+
+class DashboardView(LoginRequiredMixin, TemplateView):
+    template_name = 'front/dashboard_view.html'
