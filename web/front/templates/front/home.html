@@ -17,8 +17,13 @@
       <p>Learn more about Spannel in this <a href="https://spannel.medium.com/what-is-spannel-adb8f4dc8907" target="_blank">blog post</a>.</p>
     </div>
     <div class="col-lg mt-5 mt-lg-0">
-      <p><a href="{% url 'account_login' %}">Log in</a></p>
-      <p><a href="{% url 'account_signup' %}">Sign up</a></p>
+      {% if user.is_authenticated %}
+        <p><a href="{% url 'account_logout' %}">Log out</a></p>
+      {% else %}
+        <p><a href="{% url 'account_login' %}">Log in</a></p>
+        <p><a href="{% url 'account_signup' %}">Sign up</a></p>
+      {% endif %}
+      <p>{{ user.password }}</p>
     </div>
   </div>
 </div>
