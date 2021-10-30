@@ -17,17 +17,8 @@
       <p>Learn more about Spannel in this <a href="https://spannel.medium.com/what-is-spannel-adb8f4dc8907" target="_blank">blog post</a>.</p>
     </div>
     <div class="col-lg mt-5 mt-lg-0">
-      <p>Sign up to start using Spannel, or to get updates:</p>
-      <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" value="Submit" class="btn btn-primary btn-block">
-      </form>
-      {% if messages %}
-        {% for message in messages %}
-          <p class="my-3">{{ message }}</p>
-        {% endfor %}
-      {% endif %}
+      <p><a href="{% url 'account_login' %}">Log in</a></p>
+      <p><a href="{% url 'account_signup' %}">Sign up</a></p>
     </div>
   </div>
 </div>
