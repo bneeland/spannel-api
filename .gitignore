@@ -1,0 +1,11 @@
+# Source: https://github.com/github/gitignore/blob/master/Python.gitignore
+
+# Python
+*.pyo
+*.pyc
+
+# Mac
+.DS_Store
+
+# Django
+*.log
