@@ -11,12 +11,18 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-lg">
-      <p>{{ user }} &middot; <a href="{% url 'account_logout' %}">Log out</a></p>
+      <p>{{ user.email }} &middot; <a href="{% url 'account_logout' %}">Log out</a></p>
       <p><b>API key</b></p>
       <a class="btn btn-primary" href="#" role="button">Generate API key</a>
     </div>
     <div class="col-lg mt-5 mt-lg-0">
-      <p>GET data</p>
+      <p><b>GET data</b></p>
+      {% for order in orders %}
+        <p>
+          ID: <code>{{ order.uuid }}</code><br />
+          Date/time created: <code>{{ order.created_at }}</code><br />
+        </p>
+      {% endfor %}
     </div>
   </div>
 </div>
