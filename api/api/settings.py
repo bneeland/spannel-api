@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'dj_rest_auth.registration',
     'rest_hooks',
 ]
@@ -150,5 +151,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-LOGIN_REDIRECT_URL = 'back:obtain_auth_token'
-LOGOUT_REDIRECT_URL = 'back:obtain_auth_token'
+# Allauth configurations
+# https://django-allauth.readthedocs.io/en/latest/configuration.html
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS=False
