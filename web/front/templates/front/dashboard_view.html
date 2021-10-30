@@ -1,0 +1,24 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Home{% endblock %}
+
+{% block base_content %}
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg">
+      <p>{{ user }} &middot; <a href="{% url 'account_logout' %}">Log out</a></p>
+      <p><b>API key</b></p>
+      <a class="btn btn-primary" href="#" role="button">Generate API key</a>
+    </div>
+    <div class="col-lg mt-5 mt-lg-0">
+      <p>GET data</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

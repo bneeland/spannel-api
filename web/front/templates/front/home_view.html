@@ -18,12 +18,12 @@
     </div>
     <div class="col-lg mt-5 mt-lg-0">
       {% if user.is_authenticated %}
+        <p><a href="{% url 'front:dashboard_view' %}">Dashboard</a></p>
         <p><a href="{% url 'account_logout' %}">Log out</a></p>
       {% else %}
         <p><a href="{% url 'account_login' %}">Log in</a></p>
         <p><a href="{% url 'account_signup' %}">Sign up</a></p>
       {% endif %}
-      <p>{{ user.password }}</p>
     </div>
   </div>
 </div>
