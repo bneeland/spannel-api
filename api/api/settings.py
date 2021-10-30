@@ -154,3 +154,7 @@ REST_FRAMEWORK = {
 # Allauth configurations
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS=False
+ACCOUNT_USERNAME_REQUIRED=False
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_AUTHENTICATION_METHOD='email'
+ACCOUNT_EMAIL_VERIFICATION='none'
