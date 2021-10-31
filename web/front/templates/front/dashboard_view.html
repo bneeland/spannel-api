@@ -13,7 +13,7 @@
     <div class="col-lg">
       <p>{{ user.email }} &middot; <a href="{% url 'account_logout' %}">Log out</a></p>
       <p><b>API key</b></p>
-      <a class="btn btn-primary" href="#" role="button">Generate API key</a>
+      <p><code>{{ key }}</code></p>
     </div>
     <div class="col-lg mt-5 mt-lg-0">
       <p><b>GET data</b></p>

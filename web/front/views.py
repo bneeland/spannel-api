@@ -16,13 +16,18 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+        key = models.Key.objects.get(user=self.request.user).token
+
+        context['key'] = key
+
         url = "http://api:8001/api/orders"
 
         headers = {
-          'Authorization': 'Token b34ce6532d8614bae62f72b8a106d66b1b2e2b3a'
+          'Authorization': 'Token ' + key
         }
 
         response = requests.request("GET", url, headers=headers)
 
         context['orders'] = response.json()
+
         return context
