@@ -90,7 +90,7 @@
             </tr>
             <tr>
               <th scope="row">vendor</th>
-              <td>Vendor ID</td>
+              <td>Vourier ID</td>
               <td></td>
             </tr>
             <tr>
@@ -101,12 +101,12 @@
             <tr>
               <th scope="row">created_at</th>
               <td>DateTime</td>
-              <td><code>Auto</code></td>
+              <td><code>auto</code></td>
             </tr>
             <tr>
               <th scope="row">modified_at</th>
               <td>DateTime</td>
-              <td><code>Auto update</code></td>
+              <td><code>auto update</code></td>
             </tr>
             <tr>
               <th scope="row">acknowledged_at</th>
@@ -207,12 +207,190 @@
             <tr>
               <th scope="row">created_at</th>
               <td>DateTime</td>
-              <td><code>Auto</code></td>
+              <td><code>auto</code></td>
             </tr>
             <tr>
               <th scope="row">modified_at</th>
               <td>DateTime</td>
-              <td><code>Auto update</code></td>
+              <td><code>auto update</code></td>
+            </tr>
+          </tbody>
+        </table></small>
+      </div>
+      <p>Couriers</p>
+      <p><code>https://www.spannel.com/api/couriers/</code></p>
+      <p><kbd>GET</kbd> list of couriers</p>
+      <p><kbd>POST</kbd> new courier</p>
+      <p><code>https://www.spannel.com/api/couriers/[ID]</code></p>
+      <p><kbd>GET</kbd> single courier</p>
+      <p><kbd>PUT/PATCH</kbd> single courier</p>
+      <p><kbd>DELETE</kbd> single courier</p>
+      <div class="p-3 bg-light rounded-3 my-4">
+        <small><table class="table table-sm table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Field</th>
+              <th scope="col">Type</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">uuid</th>
+              <td>UUID</td>
+              <td><code>primary key</code></td>
+            </tr>
+            <tr>
+              <th scope="row">first_name</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">last_name</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>Email</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">vehicle_class</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">vehicle_make</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">vehicle_model</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">vehicle_year</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+            <tr>
+              <th scope="row">orders_completed</th>
+              <td>Integer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">score</th>
+              <td>Integer</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">city</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">country</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">is_active</th>
+              <td>Boolean</td>
+              <td><code>default=True</code></td>
+            </tr>
+            <tr>
+              <th scope="row">created_at</th>
+              <td>DateTime</td>
+              <td><code>auto</code></td>
+            </tr>
+            <tr>
+              <th scope="row">modified_at</th>
+              <td>DateTime</td>
+              <td><code>auto update</code></td>
+            </tr>
+          </tbody>
+        </table></small>
+      </div>
+      <p>Customers</p>
+      <p><code>https://www.spannel.com/api/customers/</code></p>
+      <p><kbd>GET</kbd> list of customers</p>
+      <p><kbd>POST</kbd> new customer</p>
+      <p><code>https://www.spannel.com/api/customers/[ID]</code></p>
+      <p><kbd>GET</kbd> single customer</p>
+      <p><kbd>PUT/PATCH</kbd> single customer</p>
+      <p><kbd>DELETE</kbd> single customer</p>
+      <div class="p-3 bg-light rounded-3 my-4">
+        <small><table class="table table-sm table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Field</th>
+              <th scope="col">Type</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">uuid</th>
+              <td>UUID</td>
+              <td><code>primary key</code></td>
+            </tr>
+            <tr>
+              <th scope="row">first_name</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">last_name</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>Email</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">address</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">city</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">province</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">postal_code</th>
+              <td>Char</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">country</th>
+              <td>Char</td>
+              <td><code>required</code></td>
+            </tr>
+            <tr>
+              <th scope="row">is_active</th>
+              <td>Boolean</td>
+              <td><code>default=True</code></td>
+            </tr>
+            <tr>
+              <th scope="row">created_at</th>
+              <td>DateTime</td>
+              <td><code>auto</code></td>
+            </tr>
+            <tr>
+              <th scope="row">modified_at</th>
+              <td>DateTime</td>
+              <td><code>auto update</code></td>
             </tr>
           </tbody>
         </table></small>
