@@ -61,7 +61,7 @@ class Order(models.Model):
     courier = models.ForeignKey('Courier', on_delete=models.CASCADE, null=True, blank=True)
     vendor = models.ForeignKey('Vendor', on_delete=models.CASCADE, null=True, blank=True)
     customer = models.ForeignKey('Customer', on_delete=models.CASCADE, null=True, blank=True)
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True)
+    # user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
     acknowledged_at = models.DateTimeField(null=True, blank=True)

@@ -8,6 +8,7 @@
   --button_light: mediumblue;
   --link_dark: darkblue;
   --link_light: mediumblue;
+  --code: grey;
 }
 
 body {
@@ -49,4 +50,8 @@ a:hover, .btn-link:hover {
 
 .btn-primary:hover {
   background: var(--button_light);
+}
+
+code {
+  color: var(--code);
 }

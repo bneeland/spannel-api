@@ -12,7 +12,7 @@ class CustomerAdmin(admin.ModelAdmin):
     list_display = ('uuid', 'first_name', 'last_name', 'email', 'city', 'created_at')
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('uuid', 'user', 'item_type', 'pickup_date', 'pickup_time', 'dropoff_date', 'dropoff_time', 'courier', 'vendor', 'created_at', 'completed_at')
+    list_display = ('uuid', 'item_type', 'pickup_date', 'pickup_time', 'dropoff_date', 'dropoff_time', 'courier', 'vendor', 'created_at', 'completed_at')
 
 admin.site.register(models.Courier, CourierAdmin)
 admin.site.register(models.Vendor, VendorAdmin)

@@ -14,6 +14,100 @@
       <p>{{ user.email }} &middot; <a href="{% url 'account_logout' %}">Log out</a></p>
       <p><b>API key</b></p>
       <p><code>{{ key }}</code></p>
+      <p><b>API endpoints</b></p>
+
+      <p>Order endpoints</p>
+      <p><code>https://www.spannel.com/api/orders/</code></p>
+      <ul>
+        <li>
+          <code>GET</code> list of orders
+        </li>
+        <li>
+          <code>POST</code> new order
+        </li>
+      </ul>
+      <p><code>https://www.spannel.com/api/orders/<b>ID</b></code></p>
+      <ul>
+        <li>
+          <code>GET</code> single order
+        </li>
+        <li>
+          <code>PUT/PATCH</code> single order
+        </li>
+        <li>
+          <code>DELETE</code> single order
+        </li>
+      </ul>
+
+      <p>Vendor endpoints</p>
+      <p><code>https://www.spannel.com/api/vendors/</code></p>
+      <ul>
+        <li>
+          <code>GET</code> list of vendors
+        </li>
+        <li>
+          <code>POST</code> new vendor
+        </li>
+      </ul>
+      <p><code>https://www.spannel.com/api/vendors/<b>ID</b></code></p>
+      <ul>
+        <li>
+          <code>GET</code> single vendor
+        </li>
+        <li>
+          <code>PUT/PATCH</code> single vendor
+        </li>
+        <li>
+          <code>DELETE</code> single vendor
+        </li>
+      </ul>
+
+      <p>Courier endpoints</p>
+      <p><code>https://www.spannel.com/api/couriers/</code></p>
+      <ul>
+        <li>
+          <code>GET</code> list of couriers
+        </li>
+        <li>
+          <code>POST</code> new courier
+        </li>
+      </ul>
+      <p><code>https://www.spannel.com/api/courier/<b>ID</b></code></p>
+      <ul>
+        <li>
+          <code>GET</code> single courier
+        </li>
+        <li>
+          <code>PUT/PATCH</code> single courier
+        </li>
+        <li>
+          <code>DELETE</code> single courier
+        </li>
+      </ul>
+
+      <p>Customer endpoints</p>
+      <p><code>https://www.spannel.com/api/customers/</code></p>
+      <ul>
+        <li>
+          <code>GET</code> list of customers
+        </li>
+        <li>
+          <code>POST</code> new customer
+        </li>
+      </ul>
+      <p><code>https://www.spannel.com/api/customers/<b>ID</b></code></p>
+      <ul>
+        <li>
+          <code>GET</code> single customer
+        </li>
+        <li>
+          <code>PUT/PATCH</code> single customer
+        </li>
+        <li>
+          <code>DELETE</code> single customer
+        </li>
+      </ul>
+
     </div>
     <div class="col-lg mt-5 mt-lg-0">
       <p><b>Orders</b></p>
