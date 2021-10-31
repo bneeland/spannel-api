@@ -20,14 +20,28 @@ class DashboardView(LoginRequiredMixin, TemplateView):
 
         context['key'] = key
 
-        url = "http://api:8001/api/orders"
-
         headers = {
           'Authorization': 'Token ' + key
         }
 
+        # Orders
+        url = "http://api:8001/api/orders"
         response = requests.request("GET", url, headers=headers)
-
         context['orders'] = response.json()
+
+        # Vendors
+        url = "http://api:8001/api/vendors"
+        response = requests.request("GET", url, headers=headers)
+        context['vendors'] = response.json()
+
+        # Couriers
+        url = "http://api:8001/api/couriers"
+        response = requests.request("GET", url, headers=headers)
+        context['couriers'] = response.json()
+
+        # Customers
+        url = "http://api:8001/api/customers"
+        response = requests.request("GET", url, headers=headers)
+        context['customers'] = response.json()
 
         return context

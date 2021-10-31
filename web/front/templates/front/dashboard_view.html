@@ -16,13 +16,82 @@
       <p><code>{{ key }}</code></p>
     </div>
     <div class="col-lg mt-5 mt-lg-0">
-      <p><b>GET data</b></p>
-      {% for order in orders %}
-        <p>
-          ID: <code>{{ order.uuid }}</code><br />
-          Date/time created: <code>{{ order.created_at }}</code><br />
-        </p>
-      {% endfor %}
+      <p><b>Orders</b></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date/time created</th>
+            <th scope="col">Item type</th>
+            <th scope="col">Item value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+            <tr>
+              <td>{{ order.created_at}}</td>
+              <td>{{ order.item_type }}</td>
+              <td>{{ order.item_value }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><b>Vendors</b></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date/time created</th>
+            <th scope="col">City</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for vendor in vendors %}
+            <tr>
+              <td>{{ vendor.created_at}}</td>
+              <td>{{ vendor.city }}</td>
+              <td>{{ vendor.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><b>Couriers</b></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date/time created</th>
+            <th scope="col">City</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for courier in couriers %}
+            <tr>
+              <td>{{ courier.created_at}}</td>
+              <td>{{ courier.city }}</td>
+              <td>{{ courier.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><b>Customers</b></p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date/time created</th>
+            <th scope="col">City</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for customer in customers %}
+            <tr>
+              <td>{{ customer.created_at}}</td>
+              <td>{{ customer.city }}</td>
+              <td>{{ customer.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
