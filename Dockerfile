@@ -1,5 +1,5 @@
 FROM python:3
 ENV PYTHONBUFFERED=1
-WORKDIR /usr/src/app
-COPY requirements.txt ./
+WORKDIR /app
+ADD . .
 RUN pip install -r requirements.txt
