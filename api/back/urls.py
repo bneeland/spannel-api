@@ -11,6 +11,7 @@ router.register('couriers', views.CourierView)
 router.register('vendors', views.VendorView)
 router.register('customers', views.CustomerView)
 router.register('orders', views.OrderView)
+router.register('hooks', views.HookView)
 
 urlpatterns = [
     path('', include(router.urls)),

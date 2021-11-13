@@ -33,6 +33,11 @@ class OrderView(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated, ]
     queryset = models.Order.objects.all()
     serializer_class = serializers.OrderSerializer
+    #
+    # def perform_create(self, serializer):
+    #     serializer.save(user=self.request.user)
 
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+class HookView(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated, ]
+    queryset = Hook.objects.all()
+    serializer_class = serializers.HookSerializer

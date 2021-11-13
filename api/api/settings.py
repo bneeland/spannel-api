@@ -50,8 +50,8 @@ INSTALLED_APPS = [
 ]
 
 HOOK_EVENTS = {
-    'order.created': 'spannelapi.Order.created',
-    'order.updated': 'spannelapi.Order.updated',
+    'order.created': 'back.Order.created',
+    'order.updated': 'back.Order.updated',
 }
 
 SITE_ID = 1

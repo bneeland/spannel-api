@@ -95,5 +95,5 @@ class HookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Hook
-        fields = '__all__'
-        read_only_fields = ('user',)
+        fields = ('target', 'event', 'user',)
+        # read_only_fields = ('user',)
